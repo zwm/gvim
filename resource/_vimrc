@@ -52,7 +52,7 @@ set showcmd
 
 " Turn off gvim error bells
 set noeb
-set vb t_vb=
+"set vb t_vb=
 
 " Easy key for scroll up and down
 " scroll up
