@@ -114,6 +114,7 @@ if %vim_dir_flag%==1 (
     echo ##  Copying files ...
     copy /y .\resource\_vimrc %vim_dir_value%
     copy /y .\resource\solarized.vim %vim_dir_value%\%vim_dir_next%\colors
+    copy /y .\resource\molokai.vim %vim_dir_value%\%vim_dir_next%\colors
     echo ##  Copy file finish !
     echo.
     echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
