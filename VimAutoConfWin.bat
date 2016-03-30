@@ -40,7 +40,6 @@ REM ------------------------------------------------------------
 REM Search for vim install dir
 REM ------------------------------------------------------------
 echo.
-echo.
 echo ##  Searching for vim installation folder ...
 set vim_dir_flag=0
 set vim_dir_value=0
@@ -121,22 +120,18 @@ if %vim_dir_flag%==1 (
     copy /y .\resource\_vimrc %vim_dir_value%
     copy /y .\resource\solarized.vim %vim_dir_value%\%vim_dir_next%\colors
     copy /y .\resource\molokai.vim %vim_dir_value%\%vim_dir_next%\colors
+    copy /y .\resource\vlog_inst_gen.vim %vim_dir_value%\%vim_dir_next%\plugin
     echo ##  Copy file finish !
     echo.
-    echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    echo ==========================================================
     echo             SUCCESS: VIM UPDATED !
-    echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    echo ==========================================================
 ) else (
     echo ##  Searching finish!
     echo ##  Installation folder: NOT find!
     echo.
-    echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    echo ==========================================================
     echo               ERROR: VIM NOT FOUND !
-    echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    echo ~~ Search Path1: "X%INSTALL_PATH_1%"
-    echo ~~ Search Path2: "X%INSTALL_PATH_2%"
-    echo ~~ Search Path3: "X%INSTALL_PATH_3%"
-    echo ~~ Search Path4: "X%INSTALL_PATH_4%"
-    echo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    echo ==========================================================
 )
 pause
