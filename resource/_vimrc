@@ -33,7 +33,7 @@ set tabstop=4
 set expandtab
 
 " Fonts
-set guifont=Inconsolata:h14
+set guifont=Inconsolata:h16
 
 " Colorscheme setup
 if has('gui_running')
