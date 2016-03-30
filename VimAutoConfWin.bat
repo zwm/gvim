@@ -24,8 +24,14 @@ echo ----------------------------------------------------------
 echo --  This file automatically search vim installation path, 
 echo --  then copy _vimrc and related configuration files to   
 echo --  vim installation path. 
-echo --  Your vim environment is freshed so convinent, so just
+echo --  Your vim environment is freshed convinently, so just
 echo --  enjoy life, enjoy coding.
+echo --
+echo --  It will search the following 4 paths in each drive:
+echo --  Path1: "X%INSTALL_PATH_1%"
+echo --  Path2: "X%INSTALL_PATH_2%"
+echo --  Path3: "X%INSTALL_PATH_3%"
+echo --  Path4: "X%INSTALL_PATH_4%"
 echo ----------------------------------------------------------
 echo --  OK, let's begin
 pause
