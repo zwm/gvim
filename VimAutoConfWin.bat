@@ -117,11 +117,22 @@ if %vim_dir_flag%==1 (
     echo ##  Searching finish !
     echo ##  Installation folder: %vim_dir_value%
     echo ##  Copying files ...
-    copy /y .\resource\_vimrc %vim_dir_value%
-    copy /y .\resource\solarized.vim %vim_dir_value%\%vim_dir_next%\colors
-    copy /y .\resource\molokai.vim %vim_dir_value%\%vim_dir_next%\colors
-    copy /y .\resource\vlog_inst_gen.vim %vim_dir_value%\%vim_dir_next%\plugin
+    copy /y %cd%\resource\_vimrc %vim_dir_value%
+    copy /y %cd%\resource\solarized.vim %vim_dir_value%\%vim_dir_next%\colors
+    copy /y %cd%\resource\molokai.vim %vim_dir_value%\%vim_dir_next%\colors
+    copy /y %cd%\resource\vlog_inst_gen.vim %vim_dir_value%\%vim_dir_next%\plugin
     echo ##  Copy file finish !
+    :: ------------------------------------------------------------
+    :: Install font
+    :: ------------------------------------------------------------
+    echo ##  Installing fonts ...
+    set fontExtensions=(ttf otf)
+    for %%x in %fontExtensions% do ( xcopy /y %cd%\resource\*.%%x %windir%\fonts\ )
+    ::注册字体，单纯的拷贝不会安装成功
+    echo ##  Registering font ...
+    reg Query "HKLM\Hardware\Description\System\CentralProcessor\0" | find /i "x86" > NUL && set OS=32BIT || set OS=64BIT
+    if %OS%==32BIT START "FontReg" %cd%\resource\FontRegx86.exe
+    if %OS%==64BIT START "FontReg" %cd%\resource\FontRegx64.exe
     echo.
     echo ==========================================================
     echo             SUCCESS: VIM UPDATED !
