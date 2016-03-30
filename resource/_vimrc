@@ -28,6 +28,20 @@ function MyDiff()
   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
 
+
+
+" Character Set cfg
+set encoding=utf-8      " vim internal coding style
+language message zh_CN.UTF-8
+set termencoding=gbk
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+
+" menu 
+set langmenu=zh_CN.UTF-8
+let $LANG = 'zh_CN.UTF-8'
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+
 " Tab&space setup
 set tabstop=4
 set expandtab
@@ -44,8 +58,10 @@ else
 endif
 colorscheme solarized
 
-" 窗口最大化
-"autocmd GUIEnter * simalt ~x
+" Auto max window
+if has ('gui_running') && has('win32')
+    au GUIEnter * simalt ~x
+endif
 
 " Show commands
 set showcmd
