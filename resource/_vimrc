@@ -98,7 +98,10 @@ set smartindent
 filetype plugin indent on
 
 " Backup dir
-set bdir=D:/program/vimbackupdir
+set bdir=C:/vimbackup
 
 " Auto change line for Chinese chariters
 set textwidth=1000
+
+" disable undofile
+set undofile
