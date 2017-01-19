@@ -102,3 +102,5 @@ set bdir=D:/program/vimbackupdir
 
 " Auto change line for Chinese chariters
 set textwidth=1000
+
+set nu
