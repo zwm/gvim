@@ -28,8 +28,6 @@ function MyDiff()
   silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
 endfunction
 
-
-
 " Character Set cfg
 set encoding=utf-8      " vim internal coding style
 language message zh_CN.UTF-8
@@ -99,10 +97,11 @@ filetype plugin indent on
 
 " Backup dir
 set bdir=C:/vimbackup
+set undodir=C:/vimbackup
+"" disable undofile
+"set undofile
 
 " Auto change line for Chinese chariters
 set textwidth=1000
 
 set nu
-" disable undofile
-set undofile
