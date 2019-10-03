@@ -116,7 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
+# add "./"
+export PATH=$PATH:./
 #synopsys
 export SYNOPSYS=/tools/synopsys
 #vcs
@@ -129,6 +130,7 @@ export VERDI_HOME=$SYNOPSYS/Verdi3_L-2016.06-1
 export NOVAS_HOME=$SYNOPSYS/Verdi3_L-2016.06-1
 export FSDB_HOME=$VERDI_HOME/share/PLI/VCS/LINUX64
 export PATH=$PATH:$VERDI_HOME/bin:$VERDI_HOME/platform/LINUX64/64
+export LD_LIBRARY_PATH=$NOVAS_HOME/share/PLI/VCS/LINUX64
 #scl
 export SCL_HOME=$SYNOPSYS/scl_11.9
 export PATH=$PATH:$SCL_HOME/amd64/bin
