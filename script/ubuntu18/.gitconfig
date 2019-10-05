@@ -1,0 +1,21 @@
+[user]
+	name = zwm
+	email = mingforregister@163.com
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
+	unstage = reset HEAD --
+	last = log -1 HEAD
+    d = difftool
+[push]
+	default = simple
+
+[core]
+	excludesfile = /home/mm/.gitignore_global
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+
