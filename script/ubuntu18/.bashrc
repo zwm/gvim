@@ -118,41 +118,45 @@ fi
 
 # add "./"
 export PATH=$PATH:./
-#synopsys
+# synopsys
 export SYNOPSYS=/tools/synopsys
-#vcs
+# vcs
 export VCS_HOME=$SYNOPSYS/vcs-2016.06
-#dve
+# dve
 export DVE_HOME=$VCS_HOME/gui/dve
 export PATH=$PATH:$DVE_HOME/bin:$VCS_HOME/bin
-#verdi
+# verdi
 export VERDI_HOME=$SYNOPSYS/Verdi3_L-2016.06-1
 export NOVAS_HOME=$SYNOPSYS/Verdi3_L-2016.06-1
 export FSDB_HOME=$VERDI_HOME/share/PLI/VCS/LINUX64
 export PATH=$PATH:$VERDI_HOME/bin:$VERDI_HOME/platform/LINUX64/64
 export LD_LIBRARY_PATH=$NOVAS_HOME/share/PLI/VCS/LINUX64
-#scl
+# scl
 export SCL_HOME=$SYNOPSYS/scl_11.9
 export PATH=$PATH:$SCL_HOME/amd64/bin
-
+# license
 export SNPSLMD_LICENSE_FILE=27000@$HOSTNAME
 export LM_LICENSE_FILE=27000@$HOSTNAME
 export VCS_ARCH_OVERIDE=linux
 export VCS_TARGET_ARCH=amd64
-
+# app
 alias vcs64="vcs -full64"
 alias verdi64="verdi -full64 &"
 alias dve64="dve -full64 &"
 alias lmli2="lmgrd -c $SYNOPSYS/Synopsys.dat"
-
+# editor
 alias g='gvim'
 alias vi='vim'
-alias l='ls -al'
+# ls
+alias l='ls -AlF'
+alias la='ls -alF'
+alias ll='ls -lF'
+# cd
 #alias cd='cd \!*;l -a' # csh
 #alias cd="cd $1;ls"
 cdls(){
 	\cd "${1}";
-	ls -al;
+	ls -AlF;
 }
 alias cd='cdls'
 alias cd..='cd ..'
@@ -161,9 +165,9 @@ alias ..='cd ..'
 alias ...='cd ../../'
 alias ....='cd ../../../'
 alias h='history'
-alias s='source ~/.bashrc'
-
+# Source alias
+alias sr='source ~/.bashrc'
+# Prompt
 #set prompt="%m[%n]%%#"
-
 #export PS1='\h:\w$'
 export PS1="[\u@\h:\w]\$"
