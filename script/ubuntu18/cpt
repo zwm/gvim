@@ -1,0 +1,4 @@
+#!/bin/bash
+cp -f ~/.bashrc_xt/.alias.sh ./tools
+cp -f ~/.bashrc_xt/.synopsys_2016_lm.sh ./tools
+cp -f ~/.bashrc_xt/.tools_synopsys_2016.sh ./tools
